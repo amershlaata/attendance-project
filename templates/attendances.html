@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- in the style lines we decorate the web page(color , front ,alline)-->
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:lightblue;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+#attendances{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#attendances td, #attendances th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#attendances tr:nth-child(even){background-color: #f2f2f2;}
+
+#attendances tr:hover {background-color: #ddd;}
+
+#attendances th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+<!-- body of the page(the content of the page)-->
+
+</head>
+<body>
+
+<div class="topnav">
+  <a  href="http://localhost:5000/Home">Home</a>
+  <a class="active" href="http://localhost:5000/Attendances">Attendances</a>
+  <a  href="http://localhost:5000/Contact">Contact</a>
+  <a  href="http://localhost:5000/About">About</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2 style="font-size: 40px;text-align: center; color:blue;"><b>ATTENDANCE PAGE</b></h2>
+  
+
+</div>
+<table  id="attendances"> 
+    <thead> 
+    <tr> 
+        <th>Name</th> 
+        <th>attendance_summary</th> 
+    </tr> 
+    </thead> 
+    <tbody> 
+        {% for row in value %}  
+            <tr> 
+                <td>{{row[0]}}</td> 
+                <td>{{row[1]}}</td> 
+            </tr> 
+        {% endfor %} 
+    </tbody> 
+</table> 
+
+</body>
+</html>
