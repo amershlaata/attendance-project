@@ -17,7 +17,7 @@ with pysftp.Connection('185.164.16.144' , username='amers', password='206353914'
 	if not os.path.exists('./csv_files'):
 		os.mkdir('csv_files')
 	sftp.get_d('/var/tmp/csv_files','./csv_files',preserve_mtime=True)
-		
+#counter for the number of files		
 j=0
 
 for i in glob.glob('./csv_files/*.csv'):
