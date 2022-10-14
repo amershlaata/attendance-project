@@ -38,6 +38,7 @@ for i in glob.glob('./csv_files/*.csv'):
 	if j==1:
 		output=df
 		continue
+#OUTER מיזוג של הקבצים בצורה כללית המשותף ולא משותף
 	output=pd.merge(output,df,on='Name',how='outer')
 		
 col_array=output.filter(like='Attendance').columns.tolist()
