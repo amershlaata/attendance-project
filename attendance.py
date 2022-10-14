@@ -40,8 +40,9 @@ for i in glob.glob('./csv_files/*.csv'):
 		continue
 #OUTER מיזוג של הקבצים בצורה כללית המשותף ולא משותף
 	output=pd.merge(output,df,on='Name',how='outer')
-		
+#col_array is variable for all the names of columns that began with attendance inn list
 col_array=output.filter(like='Attendance').columns.tolist()
+#לסכום בצורה אופקית AXIS
 output['summary']=output[col_array].sum(axis=1)
 #print(output)
 		
