@@ -27,7 +27,7 @@ for i in glob.glob('./csv_files/*.csv'):
 	df = pd.read_csv(i, encoding="UTF-16LE" , sep="\t",          												usecols=['Name' , 'Attendance Duration'])
 	df['Name']=df['Name'].str.lower()
 	
-	
+#change the format of column attendance duration from "50 min" to 50	
 	df['Attendance Duration']=df['Attendance Duration'].str.split().str[0].astype('int64')
 #group the data by name and sum the attendance duraion tha related to the same name 
 	df=df.groupby('Name' , as_index=False)['Attendance Duration'].sum()
