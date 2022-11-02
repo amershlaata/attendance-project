@@ -2,7 +2,6 @@ USER_MYSQL = 'root'
 PASSWORD_MYSQL = 'amershala'
 HOSTNAME_MYSQL = 'db'
 NAME_DATABASE = 'attendances'
-USERNAME_SFTP = 'amers'
-PASS_SFTP = '206353914'
+
 
 

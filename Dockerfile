@@ -9,5 +9,6 @@ EXPOSE 5000
 #port 5000
 CMD ["python3","flask2.py"] 
 # command that run the project
+#flask2.py this file for runing the flask application
 
 
